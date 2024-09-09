@@ -1,0 +1,44 @@
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hidden */
+    width: 250px;
+    height: 100%;
+    background-color: #333; /* Black background */
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  
+  .sidebar.open {
+    left: 0; /* Slide in */
+  }
+  
+  .sidebar-nav {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar-item {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-link {
+    color: #f1f1f1; /* Light color for links */
+    text-decoration: none;
+  }
+  
+  .sidebar-link:hover {
+    color: #ccc; /* Change color on hover */
+  }
+  
+  /* Additional styling for the navbar */
+  .navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
