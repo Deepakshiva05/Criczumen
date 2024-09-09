@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [navbarColor, setNavbarColor] = useState('bg-gray-900'); // Initial navbar color (dark)
+  const [navbarColor, setNavbarColor] = useState('bg-gray-900'); 
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -11,17 +11,16 @@ const Navbar = () => {
 
   const closeSidebar = () => {
     setIsOpen(false);
-    setNavbarColor('bg-blue-600'); // Change navbar color to blue when closing
+    setNavbarColor('bg-blue-600'); 
   };
 
   const handleLinkClick = () => {
-    closeSidebar(); // Close sidebar when a link is clicked
-    setNavbarColor('bg-blue-600'); // Change navbar color to blue when a link is clicked
+    closeSidebar(); 
+    setNavbarColor('bg-blue-600'); 
   };
 
   return (
     <>
-      {/* Navbar */}
       <nav className={`flex items-center justify-between px-4 py-3 ${navbarColor} text-white`}>
         <div className="container mx-auto flex justify-between items-center">
           <Link className="text-2xl font-bold" to="/" onClick={handleLinkClick}>
@@ -49,7 +48,6 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Sidebar (Mobile) */}
       <div className={`fixed inset-0 bg-gray-800 bg-opacity-75 transform z-50 ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out lg:hidden`}>
         <div className="bg-gray-900 w-64 h-full p-4">
           <button

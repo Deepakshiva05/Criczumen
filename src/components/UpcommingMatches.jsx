@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Lottie from 'lottie-react';
-import loadingAnimation from '../assets/loading.json'; // You can use any loading animation
+import loadingAnimation from '../assets/loading.json';
 
 const UpcomingMatches = () => {
   const [matches, setMatches] = useState([]);
@@ -17,7 +17,7 @@ const UpcomingMatches = () => {
             offset: 0,
           },
         });
-        setMatches(response.data.data); // Adjust based on actual API response structure
+        setMatches(response.data.data); 
         setLoading(false);
       } catch (err) {
         console.error(err);
@@ -56,7 +56,7 @@ const UpcomingMatches = () => {
             <p className="text-gray-700"><strong>Teams:</strong> {match['team-1']} vs {match['team-2']}</p>
             <p className="text-gray-700"><strong>Date:</strong> {new Date(match.dateTimeGMT).toLocaleString()}</p>
             <p className="text-gray-700"><strong>Venue:</strong> {match.venue}</p>
-            {/* Add more details as needed */}
+          
           </div>
         ))}
       </div>
